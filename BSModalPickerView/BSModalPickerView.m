@@ -90,12 +90,23 @@
 
 #pragma mark - Picker View Delegate
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [self.values objectAtIndex:row];
-}
-
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.indexSelectedBeforeDismissal = row;
 }
 
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320.0f, 40.0f)];
+    [lbl setTextColor:[self componentColor]];
+    [lbl setText:[self.values objectAtIndex:row]];
+    [lbl setFont:[UIFont systemFontOfSize:18.0f]];
+    [lbl setTextAlignment:NSTextAlignmentCenter];;
+    return lbl;
+}
+
+-(UIColor *)componentColor{
+    if (!_componentColor) {
+        _componentColor = [UIColor redColor];
+    }
+    return _componentColor;
+}
 @end

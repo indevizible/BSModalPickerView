@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = 'BSModalPickerView'
-  s.version      = '0.6'
+  s.version      = '0.6.1'
   s.summary      = 'A custom  UIPickerView and UIDatePicker with a simple list of options, along with a toolbar for Done/Cancel and a faded backdrop view.'
   s.homepage     = 'https://github.com/subdigital/BSModalPickerView'
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Ben Scheirman' => 'ben@scheirman.com' }
   s.source       = {
-    :git => 'https://github.com/subdigital/BSModalPickerView.git',
+    :git => 'https://github.com/indevizible/BSModalPickerView.git',
     :tag => "#{s.version}"
   }
 

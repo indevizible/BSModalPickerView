@@ -14,6 +14,7 @@
 @property (nonatomic) NSUInteger selectedIndex;
 @property (nonatomic, strong) NSString *selectedValue;
 @property (nonatomic, strong) NSArray *values;
+@property (nonatomic, strong) UIColor *componentColor;
 
 /* Initializes a new instance of the picker with the values to present to the user.
  (Note: call presentInView:withBlock: or presentInWindowWithBlock: to display the control)

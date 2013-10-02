@@ -10,7 +10,7 @@
 
 @interface BSModalPickerBase ()
 
-@property (nonatomic, strong) UIToolbar *toolbar;
+
 @property (nonatomic, strong) UIView *panel;
 @property (nonatomic, strong) UIView *backdropView;
 @property (nonatomic, strong) BSModalPickerViewCallback callbackBlock;
@@ -25,7 +25,6 @@
     self = [super init];
     if (self) {
         self.autoresizesSubviews = YES;
-        self.presentBackdropView = YES;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return self;
