@@ -35,6 +35,7 @@
     pickerView.delegate = self;
     pickerView.showsSelectionIndicator = YES;
     [pickerView selectRow:self.selectedIndex inComponent:0 animated:NO];
+    [pickerView setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.76f]];
     return pickerView;
 }
 
